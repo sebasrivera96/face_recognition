@@ -12,21 +12,31 @@ import cv2
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("obama.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+# obama_image = face_recognition.load_image_file("obama.jpg")
+# obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("biden.jpg")
-biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+# biden_image = face_recognition.load_image_file("biden.jpg")
+# biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+
+ilse_image = face_recognition.load_image_file("./knn_examples/train/ilse/ilse_1.jpg")
+ilse_face_encoding = face_recognition.face_encodings(ilse_image)[0]
+
+mony_image = face_recognition.load_image_file("./knn_examples/train/monica-elizondo/mony_1.jpg")
+mony_face_encoding = face_recognition.face_encodings(mony_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    obama_face_encoding,
-    biden_face_encoding
+    # obama_face_encoding,
+    # biden_face_encoding
+    ilse_face_encoding,
+    mony_face_encoding
 ]
 known_face_names = [
-    "Barack Obama",
-    "Joe Biden"
+    # "Barack Obama",
+    # "Joe Biden"
+    "Ilse Mancilla",
+    "Monica Elizondo"
 ]
 
 while True:
